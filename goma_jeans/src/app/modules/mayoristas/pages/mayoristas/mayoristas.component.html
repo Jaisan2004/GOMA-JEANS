@@ -1,1 +1,34 @@
-<p>mayoristas works!</p>
+<div class="form-container">
+    <h1>Formulario de Mayoristas</h1>
+    <p>Completa el formulario para enviarnos tu información y comunicarnos contigo para compras al por mayor.</p>
+  
+    <form [formGroup]="mayoristasForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nombre completo</mat-label>
+        <input matInput placeholder="Ejemplo: Juan Pérez" formControlName="nombre" />
+        <mat-error *ngIf="mayoristasForm.get('nombre')?.invalid">El nombre es obligatorio</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput placeholder="Ejemplo: correo@dominio.com" formControlName="correo" type="email" />
+        <mat-error *ngIf="mayoristasForm.get('correo')?.invalid">Correo válido obligatorio</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Teléfono</mat-label>
+        <input matInput placeholder="Ejemplo: 3001234567" formControlName="telefono" type="tel" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Mensaje</mat-label>
+        <textarea matInput rows="5" placeholder="Escribe tu mensaje aquí..." formControlName="mensaje"></textarea>
+        <mat-error *ngIf="mayoristasForm.get('mensaje')?.invalid">El mensaje es obligatorio</mat-error>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="mayoristasForm.invalid">
+        Enviar
+      </button>
+    </form>
+  </div>
+  
