@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './mujer.component.css'
 })
 export class MujerComponent {
-
+  sueldos = [1700, 1600, 1900, 1, 1, 1, 1, 1, 1, 1];
 }

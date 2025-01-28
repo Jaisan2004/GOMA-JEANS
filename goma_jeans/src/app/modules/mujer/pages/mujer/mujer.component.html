@@ -1,1 +1,136 @@
-<p>mujer works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="contenedor">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Tallas
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="form-check" *ngFor="let talla of sueldos">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Talla
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Marcas
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="form-check" *ngFor="let talla of sueldos">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Marca
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Precios
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput"
+                                        placeholder="$20.000">
+                                    <label for="floatingInput">Precio mínimo</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="floatingPassword"
+                                        placeholder="$200.000">
+                                    <label for="floatingPassword">Precio máximo</label>
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-secondary" style="width: 100%;">Filtrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Default select example">
+                            <option value="1">Marca (A-Z)</option>
+                            <option value="2">Marca (Z-A)</option>
+                            <option value="3">Precio de menor a mayor</option>
+                            <option selected value="4">Precio de mayor a menor</option>
+                        </select>
+                        <label for="floatingSelect">Ordenar por: </label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <section class="paginacion">
+                        <ul>
+                            <li class="disabled"><a>&laquo;</a></li>
+                            <li class="active"><a>1</a></li>
+                            <li><a>2</a></li>
+                            <li><a>3</a></li>
+                            <li><a>4</a></li>
+                            <li><a>&raquo;</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3" *ngFor="let sueldo of sueldos">
+                    <div class="card producto">
+                        <img src="https://www.flashy.com.co/cdn/shop/files/mom-jean-cameron-1.jpg?v=1705682596"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Jean</h5>
+                            <p class="card-text">precio</p>
+                            <a class="btn btn-primary agregar" style="width: 100%;">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="row">
+                    <div class="col-6 total">
+                        <p>1 - 48 de 19999 resultados</p>
+                    </div>
+                    <div class="col-6 total">
+                        <section class="paginacion">
+                            <ul>
+                                <li class="disabled"><a>&laquo;</a></li>
+                                <li class="active"><a>1</a></li>
+                                <li><a>2</a></li>
+                                <li><a>3</a></li>
+                                <li><a>4</a></li>
+                                <li><a>&raquo;</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
