@@ -1,1 +1,68 @@
-<p>hombre works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="contenedor">
+                FILTROS
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Default select example">
+                            <option value="1">Marca (A-Z)</option>
+                            <option value="2">Marca (Z-A)</option>
+                            <option value="3">Precio de menor a mayor</option>
+                            <option selected value="4">Precio de mayor a menor</option>
+                        </select>
+                        <label for="floatingSelect">Ordenar por: </label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <section class="paginacion">
+                        <ul>
+                            <li class="disabled"><a>&laquo;</a></li>
+                            <li class="active"><a>1</a></li>
+                            <li><a>2</a></li>
+                            <li><a>3</a></li>
+                            <li><a>4</a></li>
+                            <li><a>&raquo;</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <div class="card producto" *ngFor="let sueldo of sueldos">
+                        <img src="https://www.flashy.com.co/cdn/shop/files/mom-jean-cameron-1.jpg?v=1705682596" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go </a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="row">
+                    <div class="col-6 total">
+                        <p>1 - 48 de 19999 resultados</p>
+                    </div>
+                    <div class="col-6 total">
+                        <section class="paginacion">
+                            <ul>
+                                <li class="disabled"><a>&laquo;</a></li>
+                                <li class="active"><a>1</a></li>
+                                <li><a>2</a></li>
+                                <li><a>3</a></li>
+                                <li><a>4</a></li>
+                                <li><a>&raquo;</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
