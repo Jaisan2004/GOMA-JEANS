@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1e293b; /* Azul oscuro de fondo */
+  color: #ffffff; /* Texto blanco */
+  margin: 0;
+  padding: 0;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 90%;
+  height: 400px;
+  margin: 40px auto;
+  background-color: #2b3a4e; /* Azul más oscuro */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4ade80; /* Verde claro */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* Carousel */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Group of products */
+.carousel-group {
+  display: flex;
+  flex: 1 0 100%;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  flex: 1;
+  background-color: #123662; /* Azul intermedio */
+  color: #e2e8f0; /* Gris claro */
+  border-radius: 12px;
+  padding: 15px;
+  height: 90%;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.product-image {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #4ade80; /* Verde claro */
+  margin-bottom: 10px;
+}
+
+.product-sizes {
+  font-size: 14px;
+  color: #cbd5e1; /* Gris claro */
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Info Section */
+.info-section {
+  max-width: 80%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #334155; /* Azul intermedio */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 28px;
+  color: #4ade80; /* Verde claro */
+  margin-bottom: 20px;
+}
+
+.info-section p {
+  font-size: 16px;
+  color: #e2e8f0; /* Gris claro */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}

@@ -1,1 +1,49 @@
-<p>home works!</p>
+<!-- Carrusel de Jeans de Mujer -->
+<section class="carousel-section">
+  <h2 class="section-title">Jeans para Mujer</h2>
+  <div class="carousel-container">
+    <div class="carousel" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+      <div *ngFor="let group of womenProductGroups" class="carousel-group">
+        <div *ngFor="let product of group" class="product-card">
+          <img [src]="product.image" alt="{{ product.name }}" class="product-image" />
+          <h3 class="product-name">{{ product.name }}</h3>
+          <p class="product-price">$ {{ product.price }}</p>
+          <p class="product-sizes">Tallas: {{ product.sizes }}</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-btn prev" (click)="prevWomen()">&#8249;</button>
+    <button class="carousel-btn next" (click)="nextWomen()">&#8250;</button>
+  </div>
+</section>
+
+<!-- Carrusel de Jeans de Hombre -->
+<section class="carousel-section">
+  <h2 class="section-title">Jeans para Hombre</h2>
+  <div class="carousel-container">
+    <div class="carousel" [style.transform]="'translateX(-' + currentIndex2 * 100 + '%)'">
+      <div *ngFor="let group of menProductGroups" class="carousel-group">
+        <div *ngFor="let product of group" class="product-card">
+          <img [src]="product.image" alt="{{ product.name }}" class="product-image" />
+          <h3 class="product-name">{{ product.name }}</h3>
+          <p class="product-price">$ {{ product.price }}</p>
+          <p class="product-sizes">Tallas: {{ product.sizes }}</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-btn prev" (click)="prevMen()">&#8249;</button>
+    <button class="carousel-btn next" (click)="nextMen()">&#8250;</button>
+  </div>
+</section>
+
+<!-- Sección de información primordial -->
+<section class="info-section">
+  <h2>Bienvenido a Goma Jeans</h2>
+  <p>
+    Somos tu mejor opción para encontrar jeans de alta calidad al mejor precio.
+    Diseñamos productos que combinan estilo, comodidad y durabilidad.
+  </p>
+  <p>
+    Ya sea que estés buscando para uso personal o compras al por mayor, ¡tenemos algo para ti!
+  </p>
+</section>
