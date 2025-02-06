@@ -1,0 +1,18 @@
+<div class="col-6 total">
+    <section class="paginacion">
+      <ul>
+        <li [class.disabled]="currentPage === 1">
+          <a (click)="scrollToTop(); changePage(currentPage - 1)" [routerLink]="'/'+modulo+'/'+(currentPage - 1)+'/'+marca+'/'+talla">&laquo;</a>
+        </li>
+  
+        <li *ngFor="let page of pages" [class.active]="page === currentPage">
+          <a (click)="scrollToTop(); changePage(page)" [routerLink]="'/'+modulo+'/'+page+'/'+marca+'/'+talla">{{ page }}</a>
+        </li>
+  
+        <li [class.disabled]="currentPage === totalPages">
+          <a (click)="scrollToTop(); changePage(currentPage + 1)" [routerLink]="'/'+modulo+'/'+(currentPage + 1)+'/'+marca+'/'+talla">&raquo;</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+  

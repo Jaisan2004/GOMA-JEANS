@@ -5,6 +5,12 @@
     padding: 10px 10px;
 }
 
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
 .total{
     display: flex;
     align-items: center;
@@ -18,30 +24,34 @@ nav {
     padding: 0px;
 }
 
-.paginacion {
-    text-align: right;
-}
-
-.paginacion ul {
-    list-style: none;
-}
-
-.paginacion ul li {
-    display: inline-block;
+.talla{
     margin: 3px;
+    padding: 1px 5px;
+    border-radius: 5px;
+    border: 1px solid #212f3d;
+    color:#212f3d;
 }
 
-.paginacion ul .active a {
+.talla-seleccionada{
+    margin: 3px;
+    padding: 1px 5px;
+    border-radius: 5px;
     background-color: #212f3d;
     color: #fff;
-    padding: 5px 15px;
 }
 
-.paginacion ul .disabled a{
-    display: inline-block;
-    cursor: not-allowed;
-    color: #c8c8c8;
-    text-decoration: none;
+.talla:hover{
+    background-color: #212f3d;
+    color: #fff;
+}
+
+.form-check-input:checked {
+    background-color: #212f3d;
+    border-color: #212f3d;
+}
+
+.paginacion {
+    text-align: right;
 }
 
 .paginacion ul li a {
@@ -62,6 +72,7 @@ nav {
 .producto {
     width: 100%;
     margin-bottom: 20px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -82,8 +93,8 @@ nav {
 
 .agregar {
     background-color: #fff;
-    color: #fff;
-    border-color: #fff;
+    color: #212f3d;
+    border-color: #212f3d;
 }
 
 .producto:hover .agregar {
