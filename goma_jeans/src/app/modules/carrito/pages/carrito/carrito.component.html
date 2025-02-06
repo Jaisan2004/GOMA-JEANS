@@ -1,1 +1,22 @@
-<p>carrito works!</p>
+<div class="cart-container">
+    <h2>Carrito de Compras</h2>
+    <div *ngIf="cartProducts.length; else emptyCart">
+      <div class="cart-item" *ngFor="let product of cartProducts">
+        <img [src]="product.image" alt="{{ product.name }}" class="cart-product-image">
+        <div class="cart-item-details">
+          <h3>{{ product.name }}</h3>
+          <p>Precio: $ {{ product.price }}</p>
+          <p>Talla: {{ product.size }}</p>
+          <p>Cantidad: {{ product.quantity }}</p>
+        </div>
+      </div>
+      <div class="cart-summary">
+        <p>Total: $ {{ totalPrice }}</p>
+        <button (click)="placeOrder()">Hacer Pedido</button>
+      </div>
+    </div>
+    <ng-template #emptyCart>
+      <p>No hay productos en el carrito.</p>
+    </ng-template>
+  </div>
+  
